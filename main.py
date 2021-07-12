@@ -4,14 +4,12 @@ from flask_restful import Api, Resource, reqparse
 
 app = Flask(__name__)
 api = Api(app)
-name(kdfjjdk)
 names = {}
-editor.action.insertCursorAtEndOfEachLineSelected
 
-# namesPutArgs = flask_restful.reqparse.RequestParser() 
-# namesPutArgs = add_argument("age", type = int, help = "Age of person") 
-# namesPutArgs = add_argument("gender", type = str, help = "gender of person") 
-# namesPutArgs = add_argument("email", type = str, help = "email of person") 
+namesPutArgs = reqparse.RequestParser() 
+namesPutArgs.add_argument("age", type = int, help = "Age of person") 
+namesPutArgs.add_argument("gender", type = str, help = "gender of person") 
+namesPutArgs.add_argument("email", type = str, help = "email of person") 
 
 class HelloWorld(Resource): 
     # def get(self, name):  
