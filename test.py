@@ -1,10 +1,17 @@
 import requests
 
 BASE = "http://127.0.0.1:5000/"
-print("Put: ")
-response = requests.put(BASE + "helloworld/Nicolle", {"age": 15, "gender": "female", "email": "nicolle.folchi@hotmail.com"})
+
+#Post: 
+response = requests.post(BASE + "helloworld/Gianmarco", {"gender": "male", "email": "gmfolc@gmail.com", "age": 19})
+print(response.json())
+input()
+
+#Patch:
+response = requests.patch(BASE + "helloworld/Gianmarco", {"age": 20})
 print(response.json())   
 input()
-print("Get: ")
-response = requests.get(BASE + "helloworld/jeff")
+
+#Get:
+response = requests.get(BASE + "helloworld/Gianmarco")
 print(response.json())   
